@@ -73,7 +73,7 @@ router.get('/edit/:id', async function(req, res){
   console.log(results);
   res.render('edit_todo',{item})
 })
-router.get('/edit/:id', async function(req, res){
+router.post('/edit/:id', async function(req, res){
   const {sequelize} = require("../models/index");
   const {QueryTypes} = require("sequelize");
   await sequelize.query('update todo set description = :description where id = :id',{
