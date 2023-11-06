@@ -15,7 +15,7 @@ block content
            td= item.completed
            td
             div.row
-               if item.description
+               if item.completed
                    a(href=`incomplete/${item.id}`) Mark Incomplete
                else
                 a(href=`complete/${item.id}`) Mark Complete
